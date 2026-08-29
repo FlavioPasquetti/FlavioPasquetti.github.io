@@ -70,8 +70,16 @@ coisas falsas — que é exatamente o defeito que uma política não pode ter.
 
 ## Como publicar
 
-1. Crie um repositório **público** no GitHub, só para isto. Sugestão: `exis-privacy`.
-   No plano gratuito, o Pages só funciona em repositório público — e como as
+1. Crie um repositório **público** chamado exatamente **`flaviopasquetti.github.io`**.
+
+   O nome não é escolha de gosto: um repositório com esse nome é o *site de
+   usuário* do GitHub Pages, servido na **raiz** do domínio. É isso que faz a URL
+   já registrada nas políticas — `https://flaviopasquetti.github.io/multi-timer/`
+   — funcionar sem nenhuma pasta a mais no meio. Um repositório chamado
+   `multi-timer` serviria em `.../multi-timer/` e a política cairia em
+   `.../multi-timer/multi-timer/`.
+
+   No plano gratuito o Pages só funciona em repositório público — e como as
    políticas são públicas de qualquer forma, isso não custa nada. O que não pode é
    usar o repositório do app, que ficaria público junto.
 
@@ -84,10 +92,14 @@ coisas falsas — que é exatamente o defeito que uma política não pode ter.
 4. As URLs ficam:
 
    ```
-   https://SEU-USUARIO.github.io/exis-privacy/                    índice
-   https://SEU-USUARIO.github.io/exis-privacy/multi-timer/        inglês
-   https://SEU-USUARIO.github.io/exis-privacy/multi-timer/pt-BR/  português
+   https://flaviopasquetti.github.io/                    índice dos apps
+   https://flaviopasquetti.github.io/multi-timer/        inglês
+   https://flaviopasquetti.github.io/multi-timer/pt-BR/  português
    ```
+
+   As duas últimas **já estão escritas dentro das políticas**, no campo "endereço
+   permanente". Se você mudar o nome do repositório, mude também os dois `.txt` e
+   rode o gerador de novo.
 
 5. Abra as três **de fora** — outro navegador, ou o celular na rede móvel, sem
    estar logado no GitHub. É assim que o revisor vai abrir.
@@ -95,25 +107,36 @@ coisas falsas — que é exatamente o defeito que uma política não pode ter.
 6. Na Play Console, campo **Política de Privacidade**: a URL em inglês na ficha
    `en-US`, a em português na ficha `pt-BR`.
 
-7. Volte aos `.txt` e substitua `[URL DESTA POLÍTICA]`, `[URL DA VERSÃO EM INGLÊS]`
-   e `[URL OF THE PORTUGUESE VERSION]` pelas URLs reais. Rode o gerador de novo e
-   suba. **A política precisa apontar para si mesma** — o cabeçalho promete um
-   endereço permanente, e um marcador em colchetes no ar é o tipo de coisa que a
-   revisão vê.
-
 ## Escolha o nome do repositório uma vez só
 
-A URL vai para a Play Console e, quando o link dentro do app existir, para dentro
-do aplicativo. Renomear o repositório ou o usuário do GitHub quebra o endereço, e
-link quebrado na ficha é motivo de recusa. É a mesma lógica do `applicationId`:
-campo barato de escolher agora, caro de trocar depois.
+A URL já está dentro das políticas, vai para a Play Console e, quando o link dentro
+do app existir, para dentro do aplicativo. Renomear o repositório ou o usuário do
+GitHub quebra o endereço em todos esses lugares, e link quebrado na ficha é motivo
+de recusa. É a mesma lógica do `applicationId`: campo barato de escolher agora,
+caro de trocar depois.
 
 ## Antes de subir
 
-- Preencher os marcadores em colchetes, inclusive o `[CONTACT EMAIL]` da página
-  inicial. A lista completa está no fim de
-  `store/politica_de_privacidade_pt-BR.txt`.
+- **Completar o endereço.** Hoje as políticas dizem "Rua Santa Maria, 424, apto.
+  702" e nada mais: falta bairro, cidade, estado, CEP e país. Num aviso legal — e
+  para a COPPA, que exige o endereço do operador no aviso a responsáveis — ele
+  precisa permitir localizar a pessoa.
+- Preencher os marcadores que ainda restam. A lista está no fim de
+  `store/politica_de_privacidade_pt-BR.txt`: foro, encarregado, representantes na
+  UE e no Reino Unido, faixas etárias e as quatro datas.
 - Ler as quatro linhas `[DATA DA ...]`: **não são lacunas, são promessas de mudar
   o aplicativo** até a data que você escrever.
+- Trocar o título na Play Console para **EXISS Visual Timer & Focus**. Ele é campo
+  do Console, não do pacote, e não se atualiza sozinho — a ficha sairia com "EXIS"
+  no topo e "EXISS" no corpo.
 - Conferir que este repositório não tem nada do app: nada de `local.properties`,
   nada de `.jks` ou `.keystore`, nada de identificador real do AdMob.
+
+## O que fica público aqui
+
+Nome completo, endereço, e-mail e celular pessoais, numa página aberta e indexada
+por buscador. O telefone tem razão de estar: a COPPA (16 CFR 312.4(d)(1)) exige
+telefone no aviso a responsáveis, e a seção 11 é um aviso a responsáveis — não dá
+para tirá-lo sem sair da COPPA. O que existe é trocar a pessoa pela empresa: aberta
+uma PJ, esses quatro campos passam a ser os dela, e a atualização é reeditar os
+dois `.txt` e rodar o gerador.
