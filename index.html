@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policies &mdash; EXIS</title>
+<meta name="description" content="Privacy policies for Android apps published by EXIS - Excellent Innovation Solutions.">
+<meta name="robots" content="index, follow">
+<style>
+  /* Sem dependencia externa de proposito: a pagina precisa abrir igual no revisor
+     da Play, num celular com rede ruim e daqui a tres anos. */
+  :root {
+    --bg: #ffffff; --fg: #14201d; --muted: #5b6b67; --rule: #dde5e2;
+    --accent: #1a6250; --card: #f4f8f6; --link: #14614f; --side: #f8fbfa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101614; --fg: #e6efec; --muted: #9db0ab; --rule: #26332f;
+      --accent: #5fcfb8; --card: #17201d; --link: #6fd8c0; --side: #0c110f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg); display: flex;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* BARRA LATERAL. Em tela estreita ela vira um bloco no topo, sem JS: um menu
+     que depende de script e um menu que some quando o script nao roda, e este
+     site precisa abrir em qualquer lugar. */
+  .side {
+    flex: 0 0 16rem; background: var(--side); border-right: 1px solid var(--rule);
+    padding: 1.75rem 1.25rem; align-self: flex-start; position: sticky; top: 0;
+    max-height: 100vh; overflow-y: auto;
+  }
+  .brand {
+    display: block; font-weight: 700; font-size: 1.1rem; letter-spacing: -.01em;
+    color: var(--fg); text-decoration: none; margin-bottom: 1.75rem;
+  }
+  .brand span { display: block; font-weight: 400; font-size: .82rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+  .sect { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 .5rem; }
+  .side nav { margin-bottom: 1.75rem; }
+  .side ul, .side ol { list-style: none; margin: 0; padding: 0; }
+  .apps > li { margin-bottom: .4rem; }
+  .apps > li > a { font-weight: 600; }
+  .side a { color: var(--link); text-decoration: none; display: block; padding: .2rem 0; font-size: .93rem; }
+  .side a:hover { text-decoration: underline; }
+  .side a.on { color: var(--accent); font-weight: 700; }
+  .langs { margin: .1rem 0 .6rem .75rem; border-left: 2px solid var(--rule); padding-left: .6rem; }
+  .langs a { font-size: .87rem; font-weight: 400; }
+  .toc ol a { font-size: .86rem; line-height: 1.4; padding: .22rem 0; display: flex; gap: .45rem; }
+  .toc ol b { color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums; min-width: 1.15rem; flex: 0 0 auto; }
+
+  main { flex: 1 1 auto; min-width: 0; padding: 2.5rem 1.5rem 6rem; }
+  .inner { max-width: 44rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  .sub { color: var(--muted); font-size: .95rem; margin: 0 0 2rem; }
+  .meta {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+    padding: .9rem 1.1rem; margin: 0 0 1.5rem; font-size: .93rem; color: var(--muted);
+  }
+  h2 {
+    font-size: 1.12rem; line-height: 1.35; margin: 2.4rem 0 .8rem;
+    padding-top: 1.2rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem;
+  }
+  h2 .num { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: .55rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.15rem; }
+  li { margin: 0 0 .55rem; }
+  a { color: var(--link); overflow-wrap: anywhere; }
+  .cards { list-style: none; margin: 0; padding: 0; }
+  .cards li { margin: 0 0 1rem; }
+  .cards a {
+    display: block; text-decoration: none; color: inherit; background: var(--card);
+    border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.25rem;
+  }
+  .cards a:hover { border-color: var(--accent); }
+  .cards strong { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
+  .cards span { color: var(--muted); font-size: .92rem; }
+  .cards code { font-size: .82rem; color: var(--muted); }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
+
+  @media (max-width: 52rem) {
+    body { display: block; }
+    .side {
+      position: static; max-height: none; width: auto; border-right: 0;
+      border-bottom: 1px solid var(--rule); padding: 1.25rem;
+    }
+    .side .toc { display: none; }   /* o indice inteiro no topo empurraria o texto para fora da primeira tela */
+    .brand { margin-bottom: 1rem; }
+    main { padding: 1.75rem 1.25rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<aside class="side">
+  <a class="brand" href="./">EXIS<span>Privacy</span></a>
+  <nav aria-label="Apps">
+    <p class="sect">Apps</p>
+    <ul class="apps">
+      <li><a href="./multi-timer/">Multi Timer</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<main>
+<div class="inner">
+<h1>Privacy policies</h1>
+<p class="sub">Apps published by EXIS &mdash; Excellent Innovation Solutions</p>
+<p>Each app below has its own privacy policy. Every policy states what the app
+stores on the device, what leaves it, who receives it and how to exercise your
+rights.</p>
+<ul class="cards">
+    <li><a href="multi-timer/"><strong>Multi Timer</strong><span>Visual countdown, stopwatch, pomodoro and sequences for Android.</span><code>br.com.exiss.timer</code></a></li>
+</ul>
+<p>Questions about privacy in any of these apps: <a href="mailto:[CONTACT EMAIL]">[CONTACT EMAIL]</a></p>
+<footer>EXIS &mdash; Excellent Innovation Solutions &middot; <a href="./">All privacy policies</a></footer>
+</div>
+</main>
+</body>
+</html>

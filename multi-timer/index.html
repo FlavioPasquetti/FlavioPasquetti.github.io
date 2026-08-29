@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Multi Timer</title>
+<meta name="description" content="Privacy Policy &mdash; Multi Timer (br.com.exiss.timer)">
+<meta name="robots" content="index, follow">
+<style>
+  /* Sem dependencia externa de proposito: a pagina precisa abrir igual no revisor
+     da Play, num celular com rede ruim e daqui a tres anos. */
+  :root {
+    --bg: #ffffff; --fg: #14201d; --muted: #5b6b67; --rule: #dde5e2;
+    --accent: #1a6250; --card: #f4f8f6; --link: #14614f; --side: #f8fbfa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101614; --fg: #e6efec; --muted: #9db0ab; --rule: #26332f;
+      --accent: #5fcfb8; --card: #17201d; --link: #6fd8c0; --side: #0c110f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg); display: flex;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* BARRA LATERAL. Em tela estreita ela vira um bloco no topo, sem JS: um menu
+     que depende de script e um menu que some quando o script nao roda, e este
+     site precisa abrir em qualquer lugar. */
+  .side {
+    flex: 0 0 16rem; background: var(--side); border-right: 1px solid var(--rule);
+    padding: 1.75rem 1.25rem; align-self: flex-start; position: sticky; top: 0;
+    max-height: 100vh; overflow-y: auto;
+  }
+  .brand {
+    display: block; font-weight: 700; font-size: 1.1rem; letter-spacing: -.01em;
+    color: var(--fg); text-decoration: none; margin-bottom: 1.75rem;
+  }
+  .brand span { display: block; font-weight: 400; font-size: .82rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+  .sect { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 .5rem; }
+  .side nav { margin-bottom: 1.75rem; }
+  .side ul, .side ol { list-style: none; margin: 0; padding: 0; }
+  .apps > li { margin-bottom: .4rem; }
+  .apps > li > a { font-weight: 600; }
+  .side a { color: var(--link); text-decoration: none; display: block; padding: .2rem 0; font-size: .93rem; }
+  .side a:hover { text-decoration: underline; }
+  .side a.on { color: var(--accent); font-weight: 700; }
+  .langs { margin: .1rem 0 .6rem .75rem; border-left: 2px solid var(--rule); padding-left: .6rem; }
+  .langs a { font-size: .87rem; font-weight: 400; }
+  .toc ol a { font-size: .86rem; line-height: 1.4; padding: .22rem 0; display: flex; gap: .45rem; }
+  .toc ol b { color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums; min-width: 1.15rem; flex: 0 0 auto; }
+
+  main { flex: 1 1 auto; min-width: 0; padding: 2.5rem 1.5rem 6rem; }
+  .inner { max-width: 44rem; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  .sub { color: var(--muted); font-size: .95rem; margin: 0 0 2rem; }
+  .meta {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+    padding: .9rem 1.1rem; margin: 0 0 1.5rem; font-size: .93rem; color: var(--muted);
+  }
+  h2 {
+    font-size: 1.12rem; line-height: 1.35; margin: 2.4rem 0 .8rem;
+    padding-top: 1.2rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem;
+  }
+  h2 .num { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: .55rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.15rem; }
+  li { margin: 0 0 .55rem; }
+  a { color: var(--link); overflow-wrap: anywhere; }
+  .cards { list-style: none; margin: 0; padding: 0; }
+  .cards li { margin: 0 0 1rem; }
+  .cards a {
+    display: block; text-decoration: none; color: inherit; background: var(--card);
+    border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.25rem;
+  }
+  .cards a:hover { border-color: var(--accent); }
+  .cards strong { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
+  .cards span { color: var(--muted); font-size: .92rem; }
+  .cards code { font-size: .82rem; color: var(--muted); }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .88rem; }
+
+  @media (max-width: 52rem) {
+    body { display: block; }
+    .side {
+      position: static; max-height: none; width: auto; border-right: 0;
+      border-bottom: 1px solid var(--rule); padding: 1.25rem;
+    }
+    .side .toc { display: none; }   /* o indice inteiro no topo empurraria o texto para fora da primeira tela */
+    .brand { margin-bottom: 1rem; }
+    main { padding: 1.75rem 1.25rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<aside class="side">
+  <a class="brand" href="../">EXIS<span>Privacy</span></a>
+  <nav aria-label="Apps">
+    <p class="sect">Apps</p>
+    <ul class="apps">
+      <li><a class="on" href="../multi-timer/">Multi Timer</a>
+        <ul class="langs">
+          <li><a class="on" href="../multi-timer/" hreflang="en">English</a></li>
+          <li><a href="../multi-timer/pt-BR/" hreflang="pt-BR">Portugu&ecirc;s (Brasil)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <nav class="toc" aria-label="Contents">
+    <p class="sect">Contents</p>
+    <ol>
+      <li><a href="#s1"><b>1</b>SUMMARY</a></li>
+      <li><a href="#s2"><b>2</b>WHAT BUYING CHANGES, AND WHAT IT DOES NOT CHANGE</a></li>
+      <li><a href="#s3"><b>3</b>WHAT IS STORED ON YOUR DEVICE</a></li>
+      <li><a href="#s4"><b>4</b>ANDROID BACKUP AND TRANSFER TO A NEW DEVICE</a></li>
+      <li><a href="#s5"><b>5</b>WHAT LEAVES THE DEVICE, TO WHOM, AND WHY</a></li>
+      <li><a href="#s6"><b>6</b>ADVERTISING (GOOGLE ADMOB)</a></li>
+      <li><a href="#s7"><b>7</b>PURCHASES (GOOGLE PLAY BILLING)</a></li>
+      <li><a href="#s8"><b>8</b>THE CUSTOM THEME'S PHOTO</a></li>
+      <li><a href="#s9"><b>9</b>LEGAL BASES</a></li>
+      <li><a href="#s10"><b>10</b>EUROPE, THE UNITED KINGDOM, AND SWITZERLAND — WHAT DOES NOT EXIST TODAY</a></li>
+      <li><a href="#s11"><b>11</b>CHILDREN AND TEENAGERS</a></li>
+      <li><a href="#s12"><b>12</b>SHARING AND INTERNATIONAL DATA TRANSFERS</a></li>
+      <li><a href="#s13"><b>13</b>RETENTION AND HOW TO DELETE YOUR DATA</a></li>
+      <li><a href="#s14"><b>14</b>YOUR RIGHTS AND HOW TO EXERCISE THEM</a></li>
+      <li><a href="#s15"><b>15</b>SECURITY, INCIDENTS, AND THE PERMISSIONS IN THE PACKAGE</a></li>
+      <li><a href="#s16"><b>16</b>THE GOOGLE PLAY "DATA SAFETY" FORM</a></li>
+      <li><a href="#s17"><b>17</b>DPO, REPRESENTATIVE, LANGUAGES, GOVERNING LAW, CHANGES, AND CONTACT</a></li>
+    </ol>
+  </nav>
+</aside>
+
+<main>
+<div class="inner">
+<h1>Privacy Policy</h1>
+<p class="sub">Multi Timer &middot; <code>br.com.exiss.timer</code></p>
+  <p class="meta">Effective since: August 29, 2026<br>Permanent address: [URL OF THIS POLICY]<br>Portuguese version: [URL OF THE PORTUGUESE VERSION]<br>Controller: [LEGAL NAME OR FULL NAME] — [CNPJ, OR THE WORD "individual"]<br>Address: [FULL ADDRESS]<br>Email: [CONTACT EMAIL] — Phone: [CONTACT PHONE]<br>Developer on Google Play: EXIS — Excellent Innovation Solutions<br>App: Multi Timer, package br.com.exiss.timer, Android 11 (API 30) or higher. This policy covers that app and no other product or service.</p>
+  <h2 id="s1"><span class="num">1</span>SUMMARY</h2>
+  <ul>
+    <li>There is no account, no sign-up, no login, and no profile. We do not know who you are.</li>
+    <li>We have no server, no user database, and no admin dashboard, and nothing you create or type in the app reaches us. One thing does reach us: Google's sales report, with the order number, the date, and the country — never your name, email, or payment details. Kept for five years, to meet a tax obligation (Section 7).</li>
+    <li>Saved times, sequences, sets, theme, and preferences stay on the device (Section 3). The name fields accept any text: use the name of the activity, not the child's.</li>
+    <li>Five things leave the device. Four go to Google: the ad requests; the ad library's own diagnostics, sent in batches, which can leave the device with the app closed; the query about your purchases; and, with backup turned on, a copy of the app's data. The fifth is not Google's: the ad shown fetches files from the advertiser's servers, and those servers see the device's IP address (Sections 5 and 12).</li>
+    <li>A non-personalized ad is not an ad without collection: the IP address, device data, language, and ad events still leave the device (Section 6). The advertising identifier permission (AD_ID) is in the published package, declared by Google's library; that is why we declare the collection of identifiers in the "Data safety" form (Sections 6, 11, and 16).</li>
+    <li>Purchases go through Google Play: we never see a card, a name, an email, or your identity. Buying removes the ads, and nothing else — read Section 2 before you pay.</li>
+    <li>With Android backup turned on, your saved times and preferences — including the names you typed — go to your Google account; the transfer to a new device copies the same thing and does not depend on that switch. You are the one who turns it on and off, but we are the ones who allowed that inclusion (Section 4).</li>
+    <li>The Custom theme's photo is the only thing deliberately left out of those copies.</li>
+    <li>We use no usage analytics, tracking, or crash reporting tool of any kind, there is no Firebase configuration file in the project, and we use no mediation, no ad network other than AdMob, and no consent platform.</li>
+    <li>Counting time, saving a time, and playing the alert are local tasks and work without the internet, in both the free and the paid version. The published package, however, carries Google's ad and billing libraries, and those transmit data.</li>
+  </ul>
+  <h2 id="s2"><span class="num">2</span>WHAT BUYING CHANGES, AND WHAT IT DOES NOT CHANGE</h2>
+  <ul>
+    <li>It changes: the app stops REQUESTING ads. The footer banner disappears, the full-screen ad no longer appears, and with them the collection tied to each request disappears (Section 6).</li>
+    <li>It does NOT change: the ad library is still loaded and initialized once every time the app opens, before the app knows whether you bought anything. During that initialization, and through the transport component it brings with it, the library communicates with Google — its own configuration and diagnostics, with no ad request at all. Those transmissions continue after the purchase, are scheduled by the system, and can happen with the app closed; we cannot turn it off for you. The query to Google Play about your purchases also continues, and it is what keeps what you paid for unlocked.</li>
+  </ul>
+  <h2 id="s3"><span class="num">3</span>WHAT IS STORED ON YOUR DEVICE</h2>
+  <p>Everything below stays in the app's private area, which only the app can see; we have no access to any of it. All of it goes into the backup and transfer copy described in Section 4, EXCEPT the Custom theme's photo, which is deliberately excluded.</p>
+  <ul>
+    <li>In the exis_timer.db database: the saved times and the saved timer sets — the name you typed, the marker (an emoji from a fixed list, not a text field), the plan type, the duration and label of each step, the repeat count, and the advance and round options — plus the creation date and time of each item, which orders the list and records when you used the app.</li>
+    <li>In the exis_settings file: the theme, the appearance, the clock display, the counting behavior, the pomodoro durations, the sound and vibration for each alert, which ready-to-use examples you hid, the purchase status (two yes-or-no flags, so the app stays unlocked without the internet), and the two numbers that decide when a full-screen ad may appear — accumulated usage time and the date of the last ad, neither of which goes to AdMob or to us.</li>
+    <li>In the exis_locale file: the language tag. On Android 13 and above, the system keeps a second copy of it, outside the app's folder (Section 13).</li>
+    <li>In the internal folders: the files Google's libraries write (their own configuration and the queue of what they have not sent yet), which we do not read; and the cookies, local storage, and technical identifiers that the ad's embedded browser window (WebView) may write and read, in order to draw the ad, cap its frequency, and detect fraud — writing done by a third party on your device (Sections 6 and 10).</li>
+    <li>The Custom theme's photo, in a file of its own (Section 8).</li>
+  </ul>
+  <p>The preferences file still contains keys retired in earlier versions, which the app does not read, which are not deleted on update, and which go into the backup copy. Keeping them goes against the necessity principle (the Brazilian General Data Protection Law — LGPD, Lei 13.709/2018 — art. 6, III; GDPR art. 5(1)(c) and (e)), and we will delete them on the first launch after the update, by [DATE OF THE OLD-KEY CLEANUP]. We keep no session history, no report of a therapy session, and no record of how many times a saved time was run.</p>
+  <p><strong>THE FIELDS THAT ACCEPT ANY TEXT.</strong> The app never asks for your name, email, or age, nor for any data about the person you use the timer with. But three fields accept free text and store whatever you type: the name of a saved time, the label of each step of a sequence, and the name of a timer set — the last one is the most likely to be given a person's name, because a set is the whole session. That text stays on the device, goes into the copies described in Section 4, and is not sent to us, to AdMob, or to anyone else. A serious recommendation for use in therapy or in the classroom: do not type a full name, a student ID, or a diagnosis — use functional labels ("Warm-up", "Session 1", "Afternoon class"). The same goes for the Custom theme's image: choose a landscape or a drawing, not a photo of a child (Section 8).</p>
+  <h2 id="s4"><span class="num">4</span>ANDROID BACKUP AND TRANSFER TO A NEW DEVICE</h2>
+  <p>This is the only path by which the data you create leaves the device. Everything in Section 3 is copied, with the names and labels you typed, except the Custom theme's photo.</p>
+  <p><strong>TWO PATHS, AND THE SWITCH ONLY REACHES ONE.</strong> The system makes two copies under the same rules: the backup to your Google account and the DIRECT TRANSFER from one device to another, the one Android offers when you set up a new phone with the old one beside it. Turning the backup off prevents the first, but NOT the second — that one happens when you accept transferring the apps. If you do not want these copies, turn the backup off and, when you change devices, do not include this app in the transfer. You turn it off, and delete what has already been stored, in "Settings" &gt; "Google" &gt; "Backup": <a href="https://support.google.com/android/answer/2819582" rel="noopener">https://support.google.com/android/answer/2819582</a></p>
+  <p>We declared in the app that its data may go into these copies, and we wrote the lists of what stays out — that is how the photo was excluded. We could have turned everything off and chose to keep it, so that someone changing devices does not lose what they saved; for that decision we answer as controllers (legal basis in Section 9). Whether and when the backup runs is not up to us, and neither is what happens to the copy after it reaches your Google account.</p>
+  <p><strong>A CONSEQUENCE THAT HAS TO BE CLEAR.</strong> Any name you typed into a free field goes into the copy, stays in your Google account, and is not deleted when you uninstall the app. The inclusion is our decision, not yours. When it comes to a child's data, this has a specific consequence, written in Section 11.</p>
+  <p><strong>PROFESSIONAL USE.</strong> On a clinic or school device, the backup account is usually the institutional one: if the institution's policy does not allow that copy, turn the backup off and decline the transfer, or do not type identifiable data. We are not your institution's processor for the CONTENT you type — we do not receive it and we do not read it — but we are the ones who allowed the app's data to go into those copies, and for that decision, and only for it, we answer as controllers; the content itself remains the responsibility of whoever decided to type it. The app does not receive, import, or export medical records, student records, or class lists, and it does not integrate with any school or health system.</p>
+  <h2 id="s5"><span class="num">5</span>WHAT LEAVES THE DEVICE, TO WHOM, AND WHY</h2>
+  <ul>
+    <li>To Google (AdMob), with every ad request: the IP address, from which the approximate region is inferred; the model, manufacturer, and Android version; the language, time zone, screen size, and screen density; the package name and the ad unit identifier; app and request identifiers; and the impression, click, and close events. All of this is used to serve and format the ad, cap its frequency, measure it and bill for it, and detect fraud (Section 6).</li>
+    <li>To Google: the ad SDK's own diagnostics.</li>
+    <li>To Google Play Billing: the product identifiers, the query about the account's purchases, and the purchase token, in order to show the price in your currency and unlock what was bought (Section 7).</li>
+    <li>To Android backup: the copy of the app's data (Section 4).</li>
+    <li>To the advertiser's servers: the requests the displayed ad makes in order to load itself and measure itself (Section 12).</li>
+    <li>From Google Play to EXIS: the sales report, with the order number, the date, and the country, to meet a tax obligation (Section 7).</li>
+  </ul>
+  <p>We pass no data of yours to the ad library: the app requests the ad without sending any keyword, any location, any identifier supplied by us, or any information about what you do inside it.</p>
+  <h2 id="s6"><span class="num">6</span>ADVERTISING (GOOGLE ADMOB)</h2>
+  <p>The free version shows AdMob ads in two formats: a banner at the bottom and, far less often, a full-screen ad (an interstitial).</p>
+  <p><strong>WHEN THE INTERSTITIAL MAY APPEAR:</strong> after a count ends and the alarm is silenced, with the app in front of you; or, if that happened with the app in the background, it stays pending and appears when the timer screen exists again — in practice, the next time you open the app; or, in a plan that repeats endlessly (the default pomodoro is the common case, because it never reaches an end), when a ROUND closes with the app in the background, also staying pending. In the last two cases, if some timer is still running when you reopen the app, the ad appears on top of it. It never interrupts a count that is in front of you and never appears while the alarm is sounding. It only happens after a minimum amount of accumulated use and once an interval between ads has passed — and never if you chose a low-stimulus theme.</p>
+  <p>WHAT LEAVES WITH EACH REQUEST is in Section 5, plus the technical identification of the program that displays the ad (the "user agent"). The library also sends Google its own diagnostics, in batches, through the transport component it ships with — scheduled by the system, it can happen with the app closed, and it continues after the purchase (Section 2). None of this passes through us: we receive no IP address, no identifier, no event, and no individual report. From Google we receive only the sales reports described in Section 7.</p>
+  <p><strong>NON-PERSONALIZED ADS — EXACTLY WHAT THAT MEANS.</strong> On launch, the app configures Google's library to treat the requests as child-directed (child-directed treatment) and to limit the content to the most restrictive rating, with no exception by region. According to Google's documentation, that tagging turns off interest-based advertising and remarketing and prevents the transmission of the Android advertising identifier (AAID) in requests tagged that way. Two caveats, which apply to Sections 10 and 11 as well: it is Google's library that applies the tag to each request, and we do not capture the traffic to check it request by request; and the configuration is applied in the background at launch, while the first banner is requested right afterwards, so we cannot guarantee, by reading the code, that the very first request of a cold start already goes out tagged — we are fixing that ordering by [DATE OF THE INITIALIZATION FIX]. The tagging does not prevent the collection described above.</p>
+  <p><strong>THE ADVERTISING IDENTIFIER PERMISSION.</strong> The ad library declares, inside the published package, com.google.android.gms.permission.AD_ID and the Android ad services permissions (ACCESS_ADSERVICES_AD_ID, ATTRIBUTION, and TOPICS). They were not written by us: they come in through the automatic merging of the manifests. As long as they are in the package, the honest answer in the "Data safety" form is to declare the collection of "Device or other IDs", and that is what we declare (Section 16) — which is why we do not claim here that no identifier leaves the device. The ones we know do leave are the app's own and the ad request's, and they do not recognize you across apps. Under no circumstances do we use an advertising identifier to target, build a profile, or recognize you across apps.</p>
+  <p>The ad may open the browser, the dialer, the messaging app, or the calendar; from there on, the policies of the app or site you land in apply. To stop seeing ads, buy the ad removal or Premium (Section 2); to object without paying anything, see Section 14.</p>
+  <h2 id="s7"><span class="num">7</span>PURCHASES (GOOGLE PLAY BILLING)</h2>
+  <p>There is a Premium subscription (monthly and yearly), a lifetime Premium purchase, a lifetime upgrade, and a standalone ad-removal purchase, all processed by Google Play. The app sends Google the product identifiers, a query about the purchases that exist in the device's Google account, and the purchase token; when a purchase starts, control passes to the Play Store, out of our reach. Google returns the price already formatted in your currency and the list of this account's purchases IN THIS app, from which we read only the product, its status, and the token. The app NEVER receives or stores a card number, a name, a billing address, a CPF, an email, your Google account identifier, or any financial history outside this app: payment data is collected and processed entirely by Google, and we have no server and no server-side purchase verification.</p>
+  <p>What reaches us are the Play Console sales reports, with the order number, the date, and the country: the basis for meeting tax and accounting obligations, kept for five years (Section 13), accessed in the Play Console dashboard, with access restricted to the people responsible for that obligation, and with two-factor authentication.</p>
+  <h2 id="s8"><span class="num">8</span>THE CUSTOM THEME'S PHOTO</h2>
+  <p>An image you choose in the Android media picker: the app does not ask for storage permission and does not see your gallery, because the picker belongs to the system and only the chosen image is handed over. The original file is written, byte for byte, into the app's private area — the EXIF metadata is preserved, including GPS coordinates, if the camera recorded them. The app reads the orientation so the photo is not shown lying on its side, and it shrinks the image only in memory; the file on disk remains the original.</p>
+  <p>Legal basis: consent (LGPD art. 7, I; GDPR art. 6(1)(a)). Choosing the image is your own act, specific and optional: the app works in full without it, and twelve of the thirteen themes have no photo at all. Consent is withdrawn in the same panel where the photo is chosen. A necessary caveat: that panel only appears while the Custom theme is in use. If you lose access to it — a subscription that ended, for example — today the only way to delete the image is to clear the app's data or uninstall the app, which also deletes your saved times. So withdrawing consent is not as easy as giving it was, which is what LGPD art. 8, § 5 and GDPR art. 7(3) require, and we will fix it by making the button that removes the image always reachable, by [DATE OF THE REMOVE-BUTTON FIX]; until then, write to [CONTACT EMAIL].</p>
+  <p>The image goes to no server, does not pass through the ad library, and is excluded from both backup rule lists, in the copy to the cloud and in the direct transfer: it is the only "it does not leave the device" promise this document makes without a caveat. There is one image at a time; choosing another overwrites the previous one, and deleting it on the device removes it for good.</p>
+  <h2 id="s9"><span class="num">9</span>LEGAL BASES</h2>
+  <ul>
+    <li>Performance of a contract (LGPD art. 7, V; GDPR art. 6(1)(b)): the timer working; the purchase and the unlocking of what was paid for.</li>
+    <li>Consent (LGPD art. 7, I; GDPR art. 6(1)(a)): the Custom theme's photo — the only processing with that basis.</li>
+    <li>Legal obligation (LGPD art. 7, II; GDPR art. 6(1)(c)): keeping the sales record for tax purposes.</li>
+    <li>Legitimate interests (LGPD art. 7, IX; GDPR art. 6(1)(f)): the inclusion of the data in the backup and transfer copies (Section 4); contextual advertising (*); ad fraud prevention and ad measurement (*); the writing and reading of information on the device by the SDK and by the ad window (*); the two counters that space the ads out (Section 3) (*); and the ad SDK's diagnostics.</li>
+  </ul>
+  <p>(*) In the European Economic Area and the United Kingdom this basis is NOT sufficient today; the reason is in Section 10.</p>
+  <p>Backup: the legitimate interest is keeping people from losing what they built when they change devices; to object, see Section 4. SDK diagnostics: it is the only line that still applies after the purchase, because the library stays loaded (Section 2); we receive nothing from those transmissions and we cannot turn them off — today the only way not to be reached by them is to uninstall the app. For the remaining processing we do not point to consent, because there is no screen today that collects it.</p>
+  <h2 id="s10"><span class="num">10</span>EUROPE, THE UNITED KINGDOM, AND SWITZERLAND — WHAT DOES NOT EXIST TODAY</h2>
+  <ul>
+    <li>The rule that applies and that we are not complying with: in the European Economic Area and the United Kingdom, writing or reading information on the device requires consent (Article 5(3) of the ePrivacy Directive; Regulation 6 of PECR), and that holds even with purely contextual advertising, because the rule reaches the storage on the device, not the personalization. Frequency capping and fraud prevention use that storage (Sections 3 and 6), and Google's own EU User Consent Policy says the same.</li>
+    <li>The app shows no ad consent screen: there is no consent management platform (CMP) and no record of a choice. Nowhere in this document do we claim that we obtained your consent. We did not obtain it.</li>
+    <li>The consequence, unsoftened: under EDPB Opinion 5/2019, when Article 5(3) requires consent to write or read information on the device, the processing of the data obtained that way cannot rest on legitimate interests. So, in the EEA and the United Kingdom, the legitimate interests declared in Section 9 on the lines marked (*) are NOT a valid basis today: consent is missing, and without it there is no basis. We do not claim compliance in those regions.</li>
+    <li>In Switzerland the revised Swiss Federal Act on Data Protection (revFADP/nLPD) applies, not the GDPR; since July 31, 2024, the EU User Consent Policy also reaches Swiss users. With no consent screen here, everything above applies equally in Switzerland.</li>
+    <li>Until that consent request exists, people in those regions can buy ad removal (or Premium), record an objection free of charge through the channel in Section 14, or not install the app. On Android you can delete the advertising identifier or turn personalization off in "Settings" &gt; "Google" &gt; "Ads"; the Google account is adjusted at <a href="https://myadcenter.google.com" rel="noopener">https://myadcenter.google.com</a></li>
+  </ul>
+  <p>If the app starts showing a consent request, or if distribution in those regions is restricted, this policy will be updated before that happens, with a new effective date.</p>
+  <h2 id="s11"><span class="num">11</span>CHILDREN AND TEENAGERS</h2>
+  <p>This app was built, among other audiences, for speech therapists, occupational therapists, and teachers who work with children, including autistic children. It is used WITH children, in front of them: an adult installs and operates it; the child looks at the dial.</p>
+  <p><strong>THE BEST INTERESTS OF THE CHILD (LGPD ART. 14).</strong> The app asks no one for a name, age, date of birth, sex, school, diagnosis, photo, voice, phone number, email, or location; there is no registration, no profile, and no mandatory identification field. No feature is conditioned on providing personal data beyond what is strictly necessary for the activity (art. 14, § 4) — and what is necessary here is zero. This document is written in plain, accessible language (art. 14, § 6); if any part is unclear, write to [CONTACT EMAIL] and we will rewrite it. A parent or guardian exercises rights through the channel in Section 14.</p>
+  <p><strong>WHAT MAY CONTAIN A CHILD'S DATA.</strong> One path only: someone typing it into a free field (Section 3). That text stays on the device, goes into the backup and transfer copies (Section 4), is not sent to us, does not go to AdMob, and is not used for advertising. What is within our reach is to recommend that it not be typed, to pass that text to no one, and to keep it no longer than you choose — nothing is deleted on its own because nothing is ours to delete (LGPD art. 6, III, and arts. 15 and 16). LGPD art. 14, § 3 forbids passing a child's data to a third party without the specific consent required by § 1, and that is why the inclusion of these files in the backup copy is the part of this document that calls for your attention: it is described in Section 4, it is our decision, and the way to prevent it is there. If you have already typed something and want to undo it, delete the item in the app and delete the copy in the backup too, because uninstalling does not reach it.</p>
+  <p><strong>GOOGLE PLAY FAMILIES POLICY.</strong> In the Play Console's "Target audience and content" section we declare the target audience as [AGE GROUPS DECLARED IN THE PLAY CONSOLE]; we repeat the declaration here so the two documents can be checked side by side. The only ad SDK is AdMob, self-certified by Google as compatible with the Families Policy, with no mediation and no other network. The requests are tagged as child-directed and limited to the "general audiences" rating, with the two caveats in Section 6, and there is no personalized advertising, no remarketing, and no interest-based targeting. As to identifiers, we do NOT claim that no permanent identifier leaves the device, for the reasons and with the declaratory consequence set out in Section 6. The app contains ads and purchases; purchases require Google account authentication and go through the Play Store's parental controls.</p>
+  <p><strong>COPPA (UNITED STATES, CHILDREN UNDER 13).</strong> We do not collect, and have never received, personal information provided by a child: a name, address, email, phone number, photo, voice, or location stated by the child — the approximate region inferred from the IP address is in Section 5. What leaves with each ad request, including that IP address and that region, is processed by Google exclusively to serve a contextual ad, cap frequency, measure impressions, and fight fraud: uses that COPPA classifies as support for the internal operations of the service (16 CFR 312.2), for which parental consent is not required and in which building a profile of the child is prohibited. Nothing is used for behavioral advertising or to recognize anyone across apps. Information a child has typed into a free field can be deleted on the device itself (Section 13); for written confirmation that we hold no copy, write to [CONTACT EMAIL] or call the phone number in the header. A guardian can end the collection tied to each ad request in two direct ways, which do NOT achieve the same thing: buying the ad removal (or Premium) ends all the collection described in Section 6, although the library stays loaded and keeps sending diagnostics to Google (Section 2); uninstalling ends everything, with no exception. The operator's name, address, phone number, and email, for contact by guardians, are the ones in the header and in Section 17.</p>
+  <h2 id="s12"><span class="num">12</span>SHARING AND INTERNATIONAL DATA TRANSFERS</h2>
+  <p>There is only one third party we deal with: Google — Google LLC (United States) and, depending on your region, Google Ireland Limited. We use no mediation, no data platform, no outsourced processor, and no cloud provider of our own. The categories Google receives are in Section 5 and, in Play Billing, include all the payment data, which only Google sees.</p>
+  <p><strong>GOOGLE'S ROLE CHANGES DEPENDING ON THE STAGE, AND THAT MATTERS FOR YOUR RIGHTS.</strong> For the COLLECTION and TRANSMISSION of your device's data at the moment an ad is requested, we and Google are joint controllers: we are the ones who embedded Google's SDK in the app, and it is that decision that makes the collection happen — that is what the Court of Justice of the European Union decided in the Fashion ID case (C-40/17). At that stage, GDPR art. 26(3) lets you exercise your rights against either of the two: a request sent to [CONTACT EMAIL] is recorded and forwarded by us, never refused, and the essence of the arrangement is Google's published terms (Section 17). For what Google does AFTER receiving that data — choosing the ad, measuring, fighting fraud, storing — it acts for its own purposes, as a controller, and we have no part in it and no access; the same applies to Play Billing and to Android backup.</p>
+  <p><strong>THE AD BELONGS TO AN ADVERTISER.</strong> Google chooses and delivers the ad; the one who created it is an advertiser. When it appears, the ad fetches images, scripts, and small counting files — the ones that record that the ad was shown — from that advertiser's servers and, if the advertiser hired another company to verify the same thing, from that company's servers too. All of them see the device's IP address and the technical data that any internet request carries. We do not choose those companies, we do not know in advance which they will be, we receive nothing from them, and we have no contract with any of them. We do not sell personal data and we do not hand it over to data brokers, insurers, employers, or schools. If legally required, we may comply with a court order or a request from a public authority — noting that we have no user database to hand over.</p>
+  <p><strong>INTERNATIONAL DATA TRANSFERS.</strong> We do not transfer data outside Brazil; the only data we receive are the sales reports described in Section 7, accessed in the Play Console dashboard, which Google hosts outside Brazil. The other transfers are made by Google, from your device, to the United States and other countries where it operates infrastructure, relying on the safeguards Google adopts and publishes: standard contractual clauses under LGPD art. 33, II (the model approved by Board Resolution No. 19/2024 of Brazil's National Data Protection Authority (ANPD)) and, under the GDPR and the UK GDPR, the European Commission's standard contractual clauses and, where applicable, the EU-U.S. Data Privacy Framework and its United Kingdom extension. You can get a copy of them from Google (Section 17).</p>
+  <h2 id="s13"><span class="num">13</span>RETENTION AND HOW TO DELETE YOUR DATA</h2>
+  <p>The data on the device stays until you delete it in the app, clear the data in Android's settings, or uninstall the app: there is no automatic expiry and nothing is deleted on its own. When you uninstall, Android deletes the entire private folder, with two caveats: the copy that already went to the backup is NOT deleted, and that is where you delete it; and on Android 13 and above the chosen language is also stored by the system, outside the app's folder, and survives uninstalling. Advertising and purchase data stay in Google's custody and under its retention periods: we keep no copy and we cannot delete it. The sales reports are kept for five years (arts. 173 and 174 of the Brazilian National Tax Code (Código Tributário Nacional)).</p>
+  <p><strong>HOW TO DELETE:</strong> a specific item, in the list of saved times. The Custom theme's photo, in the theme gallery &gt; Custom theme &gt; remove the image (read the caveat in Section 8). Everything on the device, in Android Settings &gt; Apps &gt; Multi Timer &gt; Storage &gt; Clear data, or by uninstalling. The copy in the backup, in Android Settings &gt; Google &gt; Backup or at <a href="https://myaccount.google.com" rel="noopener">https://myaccount.google.com</a> — we have no access to it. Ads: by buying the ad removal or Premium (read Section 2 first). Purchases and subscriptions: checking, canceling, and refunds are handled in the Google Play Store.</p>
+  <h2 id="s14"><span class="num">14</span>YOUR RIGHTS AND HOW TO EXERCISE THEM</h2>
+  <p><strong>CHANNEL: [CONTACT EMAIL].</strong> Tell us what your request is and which country you are writing from; do not send an identity document unless we ask for one, because, with no registration, there is almost never an identity to confirm. We never charge for any of this. DEADLINES — LGPD: an immediate answer in simplified form, or a full one within 15 days (art. 19, II). GDPR and UK GDPR: up to one month, extendable by two more in complex cases, with notice within the first month (art. 12(3)). CCPA/CPRA: confirmation within 10 business days and a response within 45 days, extendable by another 45.</p>
+  <p><strong>IN BRAZIL (LGPD ART. 18):</strong> confirmation that processing exists; access; correction; anonymization, blocking, or deletion of data that is unnecessary, excessive, or processed in breach of the law; portability; deletion of data processed on the basis of consent (here, the Custom theme's photo); information about who the data was shared with (Section 12) and about the possibility of not giving consent and its consequences; withdrawal of consent (art. 8, § 5); and objection to processing carried out without consent (art. 18, § 2). Petition to the ANPD: <a href="https://www.gov.br/anpd" rel="noopener">https://www.gov.br/anpd</a></p>
+  <p><strong>IN EUROPE, THE UNITED KINGDOM, AND SWITZERLAND:</strong> access (art. 15), rectification (16), erasure (17), restriction (18), portability (20), objection to processing based on legitimate interests (21), not being subject to a decision based solely on automated processing (22) — which does not exist here, because the app builds no profile, no score, and no automated decision about anyone — and withdrawal of consent, which applies only to the Custom theme's photo (Section 8). In Switzerland the rights are the equivalent ones under the revFADP/nLPD; the articles cited are the GDPR's, for reference only. Complaints: to your country's authority — the list of the EEA ones is at <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en" rel="noopener">https://www.edpb.europa.eu/about-edpb/about-edpb/members_en</a> — to the ICO in the United Kingdom (<a href="https://ico.org.uk" rel="noopener">https://ico.org.uk</a>), or to the PFPDT/FDPIC in Switzerland (<a href="https://www.edoeb.admin.ch" rel="noopener">https://www.edoeb.admin.ch</a>).</p>
+  <p><strong>OBJECTION.</strong> You can object to the advertising and to the ad's fraud prevention (Section 6), to the SDK's diagnostics (Section 9), and to the inclusion of the data in the backup and transfer copies (Section 4). Against the backup, the objection is immediate and in your hands: turn it off and decline the direct transfer. Against the advertising, objecting is free of charge and does NOT depend on a purchase: today the app still does not have the button that records it, and that is what we are fixing — by [DATE OF THE CONSENT SCREEN] it will show a prompt asking you to choose, in which you will be able to refuse the ads without paying anything. Until then, write to [CONTACT EMAIL]: we record your objection and explain the only path that actually stops it on the device today, which is to stop using the free version. That does not satisfy GDPR art. 12(5), which requires that exercising the right be free of charge, and that is why there is a date above and not a vague promise.</p>
+  <p><strong>UNITED STATES.</strong> Categories involved in the last 12 months, in CCPA/CPRA terminology, all of them collected by Google's libraries: identifiers; internet or other network activity; geolocation (the approximate region derived from the IP address; on the GPS coordinates the theme photo may hold, see Section 8); and commercial information (the record that a purchase was made) — of that list, the only one that reaches us is the commercial information, in the form of the sales report described in Section 7. We do not sell personal information and we do not share it for cross-context behavioral advertising; that is why there is no "Do Not Sell or Share My Personal Information" link, but a deletion request sent to [CONTACT EMAIL] will be honored. Rights: to know, to delete, to correct, to limit the use of sensitive personal information — which we do not collect (LGPD art. 5, II; GDPR art. 9) — and not to be discriminated against for exercising them. We do not sell or share the personal information of anyone under 16; for children under 13, see Section 11. Residents of Virginia, Colorado, Connecticut, Utah, or another state with an equivalent law have the corresponding rights, through the same channel.</p>
+  <p><strong>THE LIMIT, STATED BEFORE YOU WRITE.</strong> We have no server and no user account, and nothing you create in the app reaches us — so we cannot locate, export, correct, or delete what is on your device or with Google. Two exceptions, which we do not refuse: the sales record (if you give us the order number, we can confirm, correct, or delete whatever is in our reports, subject to the five-year tax period); and the collection stage described in Section 12, where we are joint controllers with Google — there, a request addressed to us is recorded and forwarded, never refused.</p>
+  <h2 id="s15"><span class="num">15</span>SECURITY, INCIDENTS, AND THE PERMISSIONS IN THE PACKAGE</h2>
+  <p>SECURITY (LGPD art. 46; GDPR art. 32). The data you create stays in the app's private area, which Android isolates from the other apps; the exception is the backup copy, which sits in your Google account, under Google's rules (Section 4). We keep no remote user database, no copy of what you create in the app, and no admin dashboard: we keep the sales reports described in Section 7, in the Play Console dashboard, with restricted access and two-factor authentication. Traffic with Google's APIs is handled by Google's own libraries, over encrypted connections (HTTPS/TLS); the app exposes no port, runs no internal server, and accepts no connection from outside; the package is compiled with unused-code removal and obfuscation. Protecting the device itself — screen lock, encryption, updates — is the most important layer, and it is in your hands. We do not claim "absolute security".</p>
+  <p><strong>INCIDENTS.</strong> If there is an incident with relevant risk or harm, we will notify the ANPD within 3 business days of becoming aware of it (LGPD art. 48; ANPD Board Resolution No. 15/2024) and, where applicable, the European or British authority within 72 hours (GDPR art. 33); the people affected will be notified within the same deadline (LGPD art. 48, § 1; GDPR art. 34). Since we have no user emails, the notice will be given by publishing it on this page, prominently and with a date, by a notice on the Google Play listing and, where appropriate, inside the app.</p>
+  <p>PERMISSIONS WE ASK FOR: INTERNET and ACCESS_NETWORK_STATE (ads and Google Play; no other network request is made by the code we wrote); POST_NOTIFICATIONS (the notification with the count's progress, which can be refused without affecting how the app works); FOREGROUND_SERVICE and FOREGROUND_SERVICE_SPECIAL_USE; WAKE_LOCK; VIBRATE; and the package query for com.android.vending.</p>
+  <p>PERMISSIONS THAT ARE IN THE PACKAGE BECAUSE GOOGLE'S LIBRARIES DECLARE THEM, and not because we asked for them: AD_ID and the Android ad services ones (ACCESS_ADSERVICES_AD_ID, ATTRIBUTION, TOPICS), from the ad library (Sections 6 and 11); BILLING, from the billing library; an internal permission between components of the app itself; and visibility queries (is there a browser, custom tabs, a calendar, a messaging app, a dialer on the device?), which only serve to let the ad know whether it can open its destination — nothing about your apps is transmitted by us. The package also carries androidx.work and com.google.android.datatransport, used in the batched transmissions described in Section 6, and version tags for libraries that are never called (firebase-encoders, play-services-measurement, play-services-location, places-placereport, user-messaging-platform), whose code is removed at compile time.</p>
+  <p><strong>IN NO VERSION DO WE ASK FOR:</strong> location, camera, microphone, contacts, phone, SMS, calendar, body sensors, and storage access. The Custom theme's image comes from the system media picker, which needs no storage permission because it is the system that opens your gallery.</p>
+  <h2 id="s16"><span class="num">16</span>THE GOOGLE PLAY "DATA SAFETY" FORM</h2>
+  <p>Google Play compares this policy with the "Data safety" form on the app's listing; here is what we declare there. In the form, "collected" means the data leaves the device through an action of the app, and "shared" means it is transmitted to a third party. Watch that word, which appears with two meanings: here and in Section 12 it means transmitting data to another company, and that does happen, with Google; in Section 14, where it says we do not share, the meaning is the California one — handing data over for advertising that follows a person across apps — and that does not happen.</p>
+  <p>Declared as COLLECTED and SHARED, for advertising and fraud prevention: Device or other IDs; approximate location; app interactions (the ad's events); app logs and diagnostics. Declared as COLLECTED and NOT shared, for functionality: in-app purchase history. All the other types in the form are declared as NOT collected and NOT shared: payment info; name, email, phone number, and address; other user-generated content; installed apps; web browsing history; contacts, messages, and calendar; photos and videos; precise location; health and fitness; audio and recordings; files and documents.</p>
+  <ul>
+    <li>None of this data goes to EXIS. "App interactions" are only the ad's own events: the app does not record or transmit which timers you open, how many times you run them, or what you type.</li>
+    <li>"Device or other IDs": we declare collection because the ad library includes the advertising identifier permission in the package, even though the requests are tagged as child-directed (Sections 6 and 11).</li>
+    <li>"In-app purchase history" is marked as not shared because the query described in Section 5 happens inside the very service that processes the purchase.</li>
+    <li>"Other user-generated content" and "Name, email, phone number, address" are marked as not collected despite Section 3, because that text does not leave the device through an action of the app — the backup copy is a system function (Section 4), and it does copy that text. "Photos and videos" and "Precise location": the Custom theme's image is never transmitted, not even to the backup (Section 8).</li>
+  </ul>
+  <p>If this policy and the form diverge, the mistake is ours: write to [CONTACT EMAIL] and we will correct both.</p>
+  <h2 id="s17"><span class="num">17</span>DPO, REPRESENTATIVE, LANGUAGES, GOVERNING LAW, CHANGES, AND CONTACT</h2>
+  <p>DATA PROTECTION OFFICER (DPO), LGPD art. 41: [NAME OR TITLE OF THE DPO] — [DPO EMAIL]. That address and [CONTACT EMAIL] reach the same team.</p>
+  <p>REPRESENTATIVE (art. 27 of the GDPR and of the UK GDPR):</p>
+  <ul>
+    <li>European Union: [EU REPRESENTATIVE] — [EU REPRESENTATIVE EMAIL]</li>
+    <li>United Kingdom: [UK REPRESENTATIVE] — [UK REPRESENTATIVE EMAIL] They exist because the free version requests ads in every session of every European user, which is regular and systematic processing, not occasional: the exemption in art. 27(2) does not apply to an app distributed in the EEA and the United Kingdom.</li>
+  </ul>
+  <p><strong>LANGUAGES.</strong> Published in Brazilian Portuguese and in English, with the same content. If they diverge, the Brazilian Portuguese version prevails, because it is the controller's language and the language of the forum below — which does not remove the right of anyone in the EEA, the United Kingdom, or Switzerland to rely on the version published in their own language.</p>
+  <p><strong>GOVERNING LAW AND FORUM.</strong> Governed by Brazilian law, in particular Lei 13.709/2018 (the LGPD) and the Brazilian Internet Civil Rights Framework (Lei 12.965/2014). The forum chosen is the judicial district of [CITY AND STATE OF THE FORUM], Brazil. This does not remove the consumer rights under the Brazilian Consumer Protection Code (Lei 8.078/1990) — including suing in the forum of your own domicile — or the rights local law gives you if you are in the EEA, the United Kingdom, Switzerland, California, or another jurisdiction with legislation of its own.</p>
+  <p>CHANGES. This policy will be revised whenever there is a relevant change in the app — a library added or removed, a change of ad network, a new purchase product, a change in the backup rules, a permission removed from the package, or the creation of a consent flow — and the "Data safety" form is updated at the same time. The new version is published at this same address, with the effective date updated at the top, and the previous ones remain accessible at the end of this page. We do not send notice by email, because we have no user email list, and we do not record acceptance.</p>
+  <p>CONTACT, for a question, access, correction, deletion, objection, reporting an incident, or telling us that a sentence in this document came out unclear: [LEGAL NAME OR FULL NAME] — [CNPJ, OR THE WORD "individual"] [FULL ADDRESS] Email: [CONTACT EMAIL] — Phone: [CONTACT PHONE] We reply within the deadlines in Section 14. If the reply does not resolve the matter, contact the ANPD (<a href="https://www.gov.br/anpd" rel="noopener">https://www.gov.br/anpd</a>), your country's authority, or the consumer protection bodies.</p>
+  <p>GOOGLE'S POLICIES — Google is the company that processes the ad, purchase, and backup data: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>; <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>; <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>; <a href="https://myadcenter.google.com" rel="noopener">myadcenter.google.com</a>; <a href="https://play.google.com/intl/en/about/play-terms/" rel="noopener">play.google.com/intl/en/about/play-terms/</a>; <a href="https://support.google.com/android/answer/2819582" rel="noopener">support.google.com/android/answer/2819582</a> (backup); <a href="https://support.google.com/googleplay/android-developer/answer/9893335" rel="noopener">support.google.com/googleplay/android-developer/answer/9893335</a> (Families); <a href="https://google.com/about/company/user-consent-policy/" rel="noopener">google.com/about/company/user-consent-policy/</a> (EU User Consent Policy, cited in Section 10). Third-party addresses may change without notice.</p>
+  <p>End of document. Multi Timer — br.com.exiss.timer — effective since August 29, 2026.</p>
+
+<footer>EXIS &mdash; Excellent Innovation Solutions &middot; <a href="../">All privacy policies</a></footer>
+</div>
+</main>
+</body>
+</html>
