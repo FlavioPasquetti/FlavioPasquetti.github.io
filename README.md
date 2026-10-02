@@ -9,7 +9,24 @@ index.html                      índice dos aplicativos (inglês)
 multi-timer/index.html          política em inglês      <- ficha en-US
 multi-timer/pt-BR/index.html    política em português   <- ficha pt-BR
 .nojekyll                       desliga o Jekyll do GitHub Pages
+app-ads.txt                     autoriza a conta AdMob a vender os anúncios
 ```
+
+## app-ads.txt
+
+O AdMob só verifica o app depois de achar este arquivo **na raiz do domínio** que
+está no campo **Site** da ficha da Play (Configurações da loja → Detalhes de
+contato). A URL da política não serve para isso: o rastreador lê o campo Site, tira
+o caminho e pede `https://flaviopasquetti.github.io/app-ads.txt`. Sem o campo Site
+preenchido, o arquivo pode existir e a verificação falha do mesmo jeito.
+
+A linha é `google.com, <ID do editor>, DIRECT, f08c47fec0942fa0`. O ID do editor é
+o `pub-…` do identificador do app no AdMob (a parte antes do `~`). Ele não é
+segredo: o arquivo é público por definição, e o mesmo ID já vai dentro do APK.
+
+O gerador não apaga nada desta pasta, então o arquivo sobrevive a uma nova
+renderização. Um segundo app com AdMob na mesma conta não precisa de outra linha:
+a autorização é da conta, não do app.
 
 O **inglês fica na raiz de cada aplicativo** porque a ficha padrão da Play é a
 en-US: é a URL que mais gente abre, e a que o revisor abre primeiro.
